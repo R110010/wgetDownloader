@@ -1,5 +1,5 @@
 #This is a wget based downloader that downloads from persist links.
-#It downloads in a batch of 100 files per folder, automatically creating subfolder as req.
+#It downloads in a batch of files per folder, automatically creating subfolder as req.
 # NOTE:--- program file, text file, output folder should be in the same directory
 import wget
 from tqdm import tqdm
@@ -29,7 +29,7 @@ for url in tqdm(url_list):
         wget.download(url , out=out_path)
         file_count += 1
 
-        if file_count == 100: # change 100 to the number of files per folder you want
+        if file_count == 200: # change 200 to the number of files per folder you want
             file_count =1
             sub_dir += 1
     except Exception as e:
@@ -41,3 +41,4 @@ successful_downloads = len(url_list) - failed_downloads
 print(f"{successful_downloads} files downlaoded successfully --------")
 print(f"download failed for  {failed_downloads} files --------")
 print(f"DOWNLOAD COMPLETED!!")
+#this is the first change
