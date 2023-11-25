@@ -1,6 +1,6 @@
 #This is a wget based downloader that downloads from persist links.
 #It downloads in a batch of files per folder, automatically creating subfolder as req.
-# NOTE:--- program file, text file, output folder should be in the same directory
+# NOTE:--- Program file, input text file (Containing PerstsiURL), output folder should be in the same directory.
 import wget
 from tqdm import tqdm
 import os
